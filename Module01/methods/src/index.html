@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modulo01 - Methods</title>´
+    <style>
+        input {
+            margin: 10px;
+            width: 700pt;
+            height: 20pt;
+        }
+
+        small {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: 12pt;
+            color: blue;
+        }
+    </style>
+
+
+
+</head>
+
+<body>
+    <div class="app" style="text-align: center">
+        <p> Faça uma pergunta de Sim/Não</p>
+
+        <input type="text" v-model="questao"> 
+         <button @click = "Perguntar">Perguntar</button>
+        <br>
+        <hr>
+        <small >{{retorno}}</small>
+
+    </div>
+
+
+
+
+    <script src="../../vue.js"></script>
+    <script>
+        const options = {
+            el: ".app",
+            data() {
+                return {
+                    questao: "",
+                    retorno: "Eu não posso responder a não ser que me pergunte algo"
+                }
+            }, watch: {
+                questao: function () {
+                    this.retorno = "Espera estou a pensar....."
+                    if (this.questao.length == 0) {
+                        this.retorno = "Eu não posso respondern nada a não ser que me pergunte algo!"
+                        return;
+                    }
+                } 
+
+            },methods:{
+                Perguntar:function(){
+                    var array_intr = this.questao.split('');
+                       if(array_intr.indexOf('?') === -1){
+                           this.retorno = "Falta o sinal de interrogação -> ?"
+                           return;
+                       }
+                       this.questao = array_intr.join('')
+                            
+                        
+
+
+                    this.retorno = "Não!";
+                } 
+            }
+        }
+
+
+
+        const app = new Vue(options);
+
+    </script>
+
+</body>
+
+</html>

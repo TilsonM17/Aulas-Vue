@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V-Bind</title>
+
+    <style>
+        body {
+            margin: 20px 27px auto 27px;
+
+        }
+
+        .app div {
+            text-align: center;
+
+        }
+
+        .app div p {
+            font-size: 20pt;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="app" :style="ObjectColor">
+        <div v-if="modo_atual">
+                <button @click ="Noturno">Modo Noturno</button>
+                <p>
+                    Mollit aute fugiat ea eu sunt dolor. Nisi fugiat excepteur consequat ipsum in reprehenderit. Aliquip nulla in ullamco adipisicing ad duis ea qui excepteur minim.
+
+Magna commodo proident pariatur veniam ullamco dolore id voluptate veniam fugiat. Aute nostrud quis nostrud aute irure fugiat culpa fugiat est. Irure ullamco cupidatat ullamco magna dolor exercitation cillum et non.
+
+Laboris quis dolor sit minim sit anim nostrud elit veniam dolor. Laborum et tempor duis occaecat magna ex voluptate cupidatat reprehenderit qui ex. Ex in voluptate cupidatat velit nulla aute dolore ea eu sunt consectetur laborum irure. Mollit sunt qui veniam est mollit non ex. Eu irure qui qui duis veniam laborum. Deserunt amet adipisicing incididunt ex aliquip in duis consequat.
+
+Nostrud nisi amet occaecat labore aliqua. Excepteur sit ullamco proident aute velit est. Sint non eu fugiat eu reprehenderit magna proident. Dolore nostrud pariatur do nulla nisi non officia consectetur.
+
+Sunt sunt occaecat enim tempor irure nulla id commodo aliquip. Dolore fugiat duis et consequat esse eiusmod incididunt ut culpa minim dolor occaecat velit. Commodo et deserunt ipsum magna do elit pariatur aliquip cupidatat magna occaecat anim eu. Voluptate excepteur consectetur mollit voluptate ea et cillum adipisicing est aute tempor Lorem commodo non. Non aute enim excepteur anim excepteur ullamco reprehenderit labore fugiat reprehenderit enim. Est nisi dolore minim laborum enim dolor non aliqua quis velit irure.
+
+Occaecat anim sit nulla minim esse duis excepteur laborum excepteur. Tempor incididunt quis ullamco anim consectetur incididunt non est esse. Mollit adipisicing cupidatat occaecat adipisicing voluptate nulla ex ex ullamco deserunt fugiat non amet.
+
+Aliqua enim nisi cillum Lorem incididunt ex. Consequat quis incididunt est cillum reprehenderit nisi officia commodo. Nisi reprehenderit deserunt ex voluptate quis ipsum nisi consequat fugiat ex enim.
+
+Officia ullamco culpa aliquip reprehenderit ipsum commodo culpa nisi occaecat ea. Adipisicing Lorem do sint ex incididunt. Excepteur voluptate deserunt duis enim ex sit id cupidatat commodo. Exercitation reprehenderit nisi culpa culpa qui.
+
+Est ut veniam cupidatat aute consectetur Lorem occaecat. Minim nisi duis in ex ipsum ad incididunt. Ad occaecat fugiat veniam consectetur qui veniam deserunt. Eu velit dolor eu officia est exercitation eiusmod consectetur enim. Est pariatur ad anim pariatur id deserunt adipisicing ea labore ipsum.
+
+Pariatur tempor culpa do consectetur anim exercitation Lorem consectetur. Eu qui nisi aute duis ex eu deserunt nisi quis. Eiusmod sint esse labore exercitation magna deserunt anim eiusmod pariatur. Veniam incididunt aute sit in ad tempor adipisicing occaecat enim occaecat. Magna exercitation irure ex nisi duis anim enim eu aute.
+
+
+
+                </p>
+        </div>
+
+        <div v-else>
+                <button @click = "Diurno">Modo Diurno </button>
+                <p>
+                        Mollit aute fugiat ea eu sunt dolor. Nisi fugiat excepteur consequat ipsum in reprehenderit. Aliquip nulla in ullamco adipisicing ad duis ea qui excepteur minim.
+
+                        Magna commodo proident pariatur veniam ullamco dolore id voluptate veniam fugiat. Aute nostrud quis nostrud aute irure fugiat culpa fugiat est. Irure ullamco cupidatat ullamco magna dolor exercitation cillum et non.
+                        
+                        Laboris quis dolor sit minim sit anim nostrud elit veniam dolor. Laborum et tempor duis occaecat magna ex voluptate cupidatat reprehenderit qui ex. Ex in voluptate cupidatat velit nulla aute dolore ea eu sunt consectetur laborum irure. Mollit sunt qui veniam est mollit non ex. Eu irure qui qui duis veniam laborum. Deserunt amet adipisicing incididunt ex aliquip in duis consequat.
+                        
+                        Nostrud nisi amet occaecat labore aliqua. Excepteur sit ullamco proident aute velit est. Sint non eu fugiat eu reprehenderit magna proident. Dolore nostrud pariatur do nulla nisi non officia consectetur.
+                        
+                        Sunt sunt occaecat enim tempor irure nulla id commodo aliquip. Dolore fugiat duis et consequat esse eiusmod incididunt ut culpa minim dolor occaecat velit. Commodo et deserunt ipsum magna do elit pariatur aliquip cupidatat magna occaecat anim eu. Voluptate excepteur consectetur mollit voluptate ea et cillum adipisicing est aute tempor Lorem commodo non. Non aute enim excepteur anim excepteur ullamco reprehenderit labore fugiat reprehenderit enim. Est nisi dolore minim laborum enim dolor non aliqua quis velit irure.
+                        
+                        Occaecat anim sit nulla minim esse duis excepteur laborum excepteur. Tempor incididunt quis ullamco anim consectetur incididunt non est esse. Mollit adipisicing cupidatat occaecat adipisicing voluptate nulla ex ex ullamco deserunt fugiat non amet.
+                        
+                        Aliqua enim nisi cillum Lorem incididunt ex. Consequat quis incididunt est cillum reprehenderit nisi officia commodo. Nisi reprehenderit deserunt ex voluptate quis ipsum nisi consequat fugiat ex enim.
+                        
+                        Officia ullamco culpa aliquip reprehenderit ipsum commodo culpa nisi occaecat ea. Adipisicing Lorem do sint ex incididunt. Excepteur voluptate deserunt duis enim ex sit id cupidatat commodo. Exercitation reprehenderit nisi culpa culpa qui.
+                        
+                        Est ut veniam cupidatat aute consectetur Lorem occaecat. Minim nisi duis in ex ipsum ad incididunt. Ad occaecat fugiat veniam consectetur qui veniam deserunt. Eu velit dolor eu officia est exercitation eiusmod consectetur enim. Est pariatur ad anim pariatur id deserunt adipisicing ea labore ipsum.
+                        
+                        Pariatur tempor culpa do consectetur anim exercitation Lorem consectetur. Eu qui nisi aute duis ex eu deserunt nisi quis. Eiusmod sint esse labore exercitation magna deserunt anim eiusmod pariatur. Veniam incididunt aute sit in ad tempor adipisicing occaecat enim occaecat. Magna exercitation irure ex nisi duis anim enim eu aute.
+                        
+                        
+                </p>
+        </div>
+             
+    </div>
+
+
+
+    <script src="../../vue.js"></script>
+    <script>
+        const options = {
+            el: ".app",
+            data() {
+                return {
+                    color_d: '#ffffff',
+                    color_n: '#000000',
+                    modo_atual:true,
+                    ObjectColor:""
+                }
+            },methods:{
+                Noturno:function(){
+                     this.ObjectColor = {
+                         'background-color':this.color_n,
+                         'color': this.color_d
+                        }
+                        this.modo_atual = false
+                },
+                Diurno :function(){
+                    this.ObjectColor = {
+                        'background-color': this.color_d,
+                        'color':this.color_n
+                    }
+                    this.modo_atual = true;
+                }
+            }
+
+
+        }
+
+        const app = new Vue(options);
+    </script>
+</body>
+
+</html>

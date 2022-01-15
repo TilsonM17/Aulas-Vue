@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>V-Bind</title>
+
+    <style>
+        body {
+            margin: 20px 27px auto 27px;
+
+        }
+
+        .app div {
+            text-align: center;
+
+        }
+
+        .app div p {
+            font-size: 20pt;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="app">
+        <div :style="ObjectColor">
+            <p>Ola mundo</p>
+        </div>
+        <hr>
+        <input type="color" v-model="color">
+        <p> A sua cor é :  {{color}} </p>
+        
+       
+    </div>
+
+
+
+    <script src="../../vue.js"></script>
+    <script>
+        const options = {
+            el: ".app",
+            data() {
+                return {
+                    color: ''
+                }
+            },computed:{
+                ObjectColor:function(){
+                    return {'background-color' :this.color }
+                }
+            }
+
+        }
+
+        const app = new Vue(options);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Events -  V on</title>
+       <style>
+           body{
+               margin: 20px 30px auto 30px;
+               text-align: center;
+           }
+       </style>
+
+</head>
+<body>
+
+      <div id="app">
+       <a href="http://localhost/MeMecity/" @click.prevent="Ola('Ola mundo')"> click em min</a>
+        <br>
+           {{sms}}
+      </div>
+    
+             
+
+    <script src="../vue.js"></script>
+    <script>
+       //=====================================================================
+        const options = {
+            el: "#app",
+             data(){
+                 return{
+                   sms:''
+                 }
+             },methods:{
+                 Ola:function(sms){
+                       this.sms = sms 
+                 }
+             }
+        };
+        //======================================================================
+         const app = new Vue(options);   
+
+
+
+
+    </script>
+</body>
+</html>

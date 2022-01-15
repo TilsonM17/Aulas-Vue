@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+       <style>
+           body{
+               margin: 20px 30px auto 30px;
+               text-align: center;
+           }
+           input{
+               margin-top: 50px;
+               width: 606pt;
+               height: 30px;
+           }
+       
+       </style>
+
+</head>
+<body>
+
+      <div id="app">
+        <span v-html= "sms"> </span> 
+        <br>
+        <br>
+        <textarea v-model = "sms">
+        </textarea> 
+      </div>
+    
+
+
+    <script src="../../vue.js"></script>
+    <script>
+       //=====================================================================
+        const options = {
+            el: "#app",
+             data(){
+                 return{
+                     sms : "<h1>OI</h1>"
+                 }
+             }
+        };
+        //======================================================================
+         const app = new Vue(options);   
+
+
+
+
+    </script>
+</body>
+</html>
